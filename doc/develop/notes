@@ -33,6 +33,17 @@
 	$('div:nth-child(even)')
 	//选择包含Henry的td元素
 	$('td:contains(Henry)')
+	//选择包含Henry td元素的下一个td元素
+	$('td:contains("Henry")').next()
+	//选择包含Henry td元素的下所有其他的td元素
+	$('td:contains("Henry")').nextAll()
+	//选择包含Henry td元素的下所有其他的td元素 并包含当前td元素
+	$('td:contains("Henry")').nextAll().addBack()
+	$('td:contains("Henry")').parent().children()
+	//选择包含Henry td元素的上一个td元素
+	$('td:contains("Henry")').prevAll()
+	//选择包含Henry td元素的上所有其他的td元素
+	$('td:contains("Henry")').nextAll()
 	//选择form中的input(text|textarea|button)元素
 	$('form:input');
 	//选择form中button元素
@@ -46,4 +57,21 @@
 	//自定义filter过滤
 	$('a').filter(function(){
 		return this.hostname && this.hostname != location.hostname;
+	})
+
+--Jquery Handling Events
+	//onload事件触发条件，当html文件已经下载到浏览器端则触发此动作
+	window.onLoad()
+	//ready事件触发条件，当html dom解析完毕则触发此动作  
+	$(document).ready()
+	//替换class方法
+	$(this).toggleClass()
+	//添加class方法
+	$(this).addClass()
+	$(this).removeClass()
+	//鼠标移入和移出事件处理
+	$(this).hover(function(){
+		//移入触发
+	},function(){
+		//移出触发
 	})
