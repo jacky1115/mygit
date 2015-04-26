@@ -1,3 +1,49 @@
 --bower update 
-	npm update -g bower
+	sudo npm update -g bower
 
+--bower install jquery last version
+	bower install jquery
+
+--Jquery selection
+	//选择节点元素
+	$('div')
+	//选择class name 为 class1 的div节点 
+	$('div.class1')
+	//选择div节点下一级的li元素
+	$('div > li')
+	//选择div 节点下的所有li元素
+	$('div li')
+	//属性过滤
+	$('a[href]')
+	//选择href以http:开头的a元素
+	$('a[href^="http:"')
+	//选择href以.pdf结尾的a元素
+	$('a[href$=".pdf"')
+	//选择href以http:开头，并且其中包含lizq的a元素
+	$('a[href^="http:"][href*="lizq"]')
+	//选择href不包含lizq的a元素
+	$('a[href!="lizq"')
+	//选择第一个div元素
+	$('div:eq(0)')
+	//选择第一个div元素
+	$('div:nth-child(1)')
+	//选择div的偶数元素
+	$('div:nth-child(odd)')
+	//选择div基数元素
+	$('div:nth-child(even)')
+	//选择包含Henry的td元素
+	$('td:contains(Henry)')
+	//选择form中的input(text|textarea|button)元素
+	$('form:input');
+	//选择form中button元素
+	$('form:button')
+	//选择form中checked的radio元素
+	$('form:checked')
+	//选择form中selected的option元素
+	$('form:selected')
+	//选择input type为password的元素
+	$('input[type="password"]')
+	//自定义filter过滤
+	$('a').filter(function(){
+		return this.hostname && this.hostname != location.hostname;
+	})

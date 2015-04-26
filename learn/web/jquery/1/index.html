@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style rel="stylesheet">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .divCls{
+            background-color: red;
+            width : 100px;
+            height: 100px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body>
+
+    <button>animate button</button>
+    <div class="divCls"></div>
+
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('button').click(function(){
+
+                $('div').animate({left : '250px'});
+            });
+        });
+    </script>
+</body>
+</html>
